@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import nextImage from "../../assets/next js image.png";
 
 const GalleryPage = () => {
   return (
@@ -20,6 +20,15 @@ const GalleryPage = () => {
       <h2 className="text-2xl text-center my-4">Next js optimized image </h2>
       <Image
         src="https://nextjs.org/api/docs-og?title=Optimizing:%20Images"
+        alt="next image"
+        width={500}
+        height={500}
+        className="mx-auto"
+      ></Image>
+      <br />
+      <h2 className="text-2xl text-center my-4">Local image </h2>
+      <Image
+        src={nextImage}
         alt="next image"
         width={500}
         height={500}
