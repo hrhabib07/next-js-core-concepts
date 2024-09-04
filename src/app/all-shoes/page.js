@@ -1,24 +1,21 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
 
-export const metadata = {
-  title: "ABC Home page",
-  description: "this is ABC website home page",
-};
-
-const HomePage = async () => {
+const AllShoesPage = async () => {
   const res = await fetch("http://localhost:5000/shoes", {
-    next: {
-      revalidate: 5,
-    },
+    cache: "no-store",
   });
-  const shoes = await res.json();
-  // console.log(shoes);
+  const shoesData = await res.json();
   return (
-    <div className="text-center my-2">
-      <h1 className="text-4xl text-center my-8">This home page 222 </h1>
+    <div>
+      <h1 className="text-4xl text-center my-8">Here is your all shoes </h1>
       <div>
         <ul className="text-center flex items-center justify-center gap-4 my-8">
+          <li>
+            <Link href="/" className="p-2 border bg-gray-50">
+              Home
+            </Link>
+          </li>
           <li>
             <Link href="/gallery" className="p-2 border bg-gray-50">
               gallery
@@ -31,8 +28,8 @@ const HomePage = async () => {
           </li>
         </ul>
       </div>
-      <div className="grid grid-cols-3 gap-4">
-        {shoes.slice(0, 3).map((shoe) => (
+      <div className="grid grid-cols-5 gap-4">
+        {shoesData.map((shoe) => (
           <div
             key={shoe.id}
             className="bg-white shadow-md rounded-lg overflow-hidden"
@@ -52,15 +49,8 @@ const HomePage = async () => {
           </div>
         ))}
       </div>
-      <div className="my-4">
-        <Link href="/all-shoes" className="p-2  bg-gray-50">
-          <button className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
-            See More
-          </button>
-        </Link>
-      </div>
     </div>
   );
 };
 
-export default HomePage;
+export default AllShoesPage;

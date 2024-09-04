@@ -1,5 +1,6 @@
 import Image from "next/image";
 import nextImage from "../../assets/next js image.png";
+import Link from "next/link";
 
 const GalleryPage = () => {
   return (
@@ -8,6 +9,25 @@ const GalleryPage = () => {
         {" "}
         Welcome to image optimization page
       </h2>
+      <div>
+        <ul className="text-center flex items-center justify-center gap-4 my-8">
+          <li>
+            <Link href="/" className="p-2 border bg-gray-50">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/gallery" className="p-2 border bg-gray-50">
+              gallery
+            </Link>
+          </li>
+          <li>
+            <Link href="/all-shoes" className="p-2 border bg-gray-50">
+              All Shoes
+            </Link>
+          </li>
+        </ul>
+      </div>
       <h2 className="text-2xl text-center my-4">Normal image tag</h2>
       <img
         src="https://nextjs.org/api/docs-og?title=Optimizing:%20Images"
