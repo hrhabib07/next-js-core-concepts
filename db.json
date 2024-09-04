@@ -1,0 +1,40 @@
+{
+  "shoes": [
+    {
+      "id": 1,
+      "title": "The Grand Illusion",
+      "description": "A mesmerizing magic show featuring world-renowned illusionists.",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "title": "Symphony of Lights",
+      "description": "An enchanting orchestral performance accompanied by a dazzling light show.",
+      "price": 75
+    },
+    {
+      "id": 3,
+      "title": "Comedy Nights",
+      "description": "A hilarious stand-up comedy night with top comedians from around the globe.",
+      "price": 40
+    },
+    {
+      "id": 4,
+      "title": "Broadway Dreams",
+      "description": "A captivating musical experience bringing the best of Broadway to your city.",
+      "price": 90
+    },
+    {
+      "id": 5,
+      "title": "Cirque Extravaganza",
+      "description": "A breathtaking circus performance featuring acrobats, clowns, and aerialists.",
+      "price": 85
+    },
+    {
+      "id": 6,
+      "title": "The Art of Dance",
+      "description": "A contemporary dance showcase featuring talented dancers from around the world.",
+      "price": 65
+    }
+  ]
+}
